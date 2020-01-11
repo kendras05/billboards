@@ -9,7 +9,7 @@
 
 100.times do |i|
   Artist.create ({
-    name: "Artist Name: #{i})"
+    name: "Artist Name: #{Faker::Music.unique.band})"
   })
 end
 
@@ -17,7 +17,7 @@ end
   Song.create ({
     title: "New song #{i}"
     released_on: i.days.ago
-    genre: "x #{i}"
+    genre: "x #{Faker::Music.genre}"
     rating: rand(f)
     artist_id: artist.sample.id
   })
