@@ -16,15 +16,15 @@ end
 100.times do |i|
   Song.create ({
     title: "New song #{i}"
-    released_on: i.days.ago,
-    genre: "Genre is #{i}"
-    rating: rand(i)
+    released_on: i.days.ago
+    genre: "x #{i}"
+    rating: rand(f)
     artist_id: artist.sample.id
   })
+end
 
 10.times do |i|
   Billboard.create ({
     title: "Top #{i} songs"
   })
-
-
+end 
