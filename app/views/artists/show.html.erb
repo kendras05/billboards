@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% @artists.each do |artist| %>
+  <p><%= artist.name %></p>
+<% end %>
+
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
