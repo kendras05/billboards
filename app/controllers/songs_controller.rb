@@ -1,6 +1,10 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_user!
+protect_from_forgery prepend: true
+
+
   # GET /songs
   # GET /songs.json
   def index

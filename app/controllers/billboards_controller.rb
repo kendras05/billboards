@@ -1,4 +1,8 @@
 class BillboardsController < ApplicationController
+
+  before_action :authenticate_user!
+protect_from_forgery prepend: true
+
   before_action :set_billboard, only: [:show, :edit, :update, :destroy]
 
   # GET /billboards
